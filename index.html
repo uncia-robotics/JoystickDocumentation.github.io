@@ -21,7 +21,7 @@
         <!-- <hr class="my-4"> -->
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
 
-
+<!-- Android App Logic Start-->
         <div class="card mb-3 bg-dark">
           <div class="row no-gutters">
             <div class="col-md-4">
@@ -29,7 +29,7 @@
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h3 class="card-title">Logic</h3>
+                <h3 class="card-title">Android App Logic</h3>
 
                 <ul class="list-unstyled">
                   <li><p>There are 5 buttons on the screen namely black, red, green, yellow, blue.</p></li>
@@ -70,6 +70,46 @@
             </div>
           </div>
         </div>
+        <!-- Android App logic end -->
+
+
+
+        <!-- Arduino Logic Start -->
+               <div class="card mb-3 bg-dark">
+          <div class="row no-gutters">
+            <div class="col-md-8">
+              <div class="card-body">
+                <h3 class="card-title">Arduino Logic</h3>
+
+                <ul class="list-unstyled">
+                  <li>
+                      <li>void setup() {</li>
+                        <li>Serial.begin(9600);</li>
+                        <li>}</li>
+                        <li>void loop() {</li>
+                        <li>if(Serial.available()>0)</li>
+                        <li>{</li>
+                        <li>String value = Serial.readStringUntil('#');</li>
+                          <li>if(value.length()==7)</li>
+                          <li>{</li>
+                          <li>String angle = value.substring(0, 3);</li>
+                          <li>String strength = value.substring(3, 6);</li>
+                          <li>String button = value.substring(6, 8);</li>
+                          <li>Serial.print("angle: ");Serial.print(angle);Serial.print('\t');</li>
+                          <li>Serial.print("strength: ");Serial.print(strength);Serial.print('\t');</li>
+                          <li>Serial.print("button: ");Serial.print(button);Serial.println("");</li>
+                          <li>Serial.flush();</li>
+                          <li>value="";</li>
+                          <li>}</li>
+                        <li>}</li>
+                        <li>}</li>
+                    </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Arduino Logic end -->
 
 
 
