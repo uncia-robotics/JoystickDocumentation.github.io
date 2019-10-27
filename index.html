@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Document</title>
+  </head>
+  <body>
+   
+  <div class="container">
+    <div class="row">
+      <div class="jumbotron container">
+        <h2>Documentation</h2>
+        <p class="lead">Joystick app works with Arduino </p>
+        <!-- <hr class="my-4"> -->
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+
+
+        <div class="card mb-3 bg-dark">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="light.png" class="card-img img-fluid" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h3 class="card-title">Logic</h3>
+
+                <ul class="list-unstyled">
+                  <li><p>There are 5 buttons on the screen namely black, red, green, yellow, blue.</p></li>
+                  <li><p>Black button is joystick, same like real Joystick controller - Joystick provide 2 values</p>
+                    <ul>
+                      <li>Angle [ 0 - 359 ]</li>
+                      <li>Strength [ 0 - 100 ]</li>
+                    </ul>
+                  </li>
+                  <p><li>Rest of the buttons (red, green, yellow, blue) are normal buttons, by default there values are set to 0. You can changes the values by going to Menu > Setting.</li></p>
+
+                  <p><li>Joystick, red, green, yellow, blue button values will be visible on the left and right of < Sending Data > in real time.</li></p>
+
+                  <p><li>Combination of these all buttons (data) is sent through bluetooth
+                      <ul>
+                        <li>By default seven digit number is set 0000000 </li>
+                        <li>First three digit represent Angle</li>
+                        <li>Second three digit represent Strength</li>
+                        <li>Last one digit represent the values of button blue, green, red, yellow</li>
+                      </ul>
+                    </li>
+                  </p>
+
+
+                  <p><li>Example: the seven digit number is 2700891, So
+                      <ul>
+                        <li>First three digit represent Angle i.e : 270</li>
+                        <li>Second three digit represent Strength i.e : 089</li>
+                        <li>Last one digit represent the values of button blue, green, red, yellow i.e : 1</li>
+                      </ul>
+                    </li>
+                  </p>
+
+                </ul>
+
+                <p class="card-text"><small class="text-muted">2700891 will be sent to arduino through bluetooth</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <p class="lead text-center">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Google Playstore</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
