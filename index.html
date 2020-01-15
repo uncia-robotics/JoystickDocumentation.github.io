@@ -83,6 +83,8 @@
         <!-- Android App logic end -->
 
 
+        
+
 
         <!-- Arduino Logic Start -->
           <div class="card mb-3 bg-dark">
@@ -92,7 +94,7 @@
             </div>
             <div class="col-md-8">
               <div class="card-body">
-                <h3 class="card-title">Arduino Sketch</h3>
+                <h3 class="card-title">Joystick Advance</h3>
 
                 <ul class="list-unstyled">
                   <li>
@@ -126,8 +128,51 @@
 
 
 
+
+
+                <!-- Arduino Logic Start -->
+                <div class="card mb-3 bg-dark">
+                    <div class="row no-gutters">
+                       <div class="col-md-4">
+                        <img src="arduino.jpg" class="card-img img-fluid" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h3 class="card-title">Joystick and Accelerometer</h3>
+          
+                          <ul class="list-unstyled">
+                            <li>
+                                <li>void setup() {</li>
+                                  <li>Serial.begin(9600);</li>
+                                  <li>}</li>
+                                  <li>void loop() {</li>
+                                  <li>if(Serial.available()>0)</li>
+                                  <li>{</li>
+                                  <li>String value = Serial.readStringUntil('#');</li>
+                                    <li>if(value.length()==2)</li>
+                                    <li>{</li>
+                                    <li>String joystick = value.substring(0, 1);</li>
+                                    <li>String button = value.substring(1, 2);</li>
+                                    <li>String button = value.substring(6, 8);</li>
+                                    <li>Serial.print("Direction: ");Serial.print(joystick);Serial.print('\t');</li>
+                                    <li>Serial.print("Button: ");Serial.print(button);Serial.println("");</li>
+                                    <li>Serial.flush();</li>
+                                    <li>value="";</li>
+                                    <li>}</li>
+                                  <li>}</li>
+                                  <li>}</li>
+                              </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Arduino Logic end -->
+
+
+
         <p class="lead text-center">
-          <a class="btn btn-primary btn-lg" href="#" role="button">Google Playstore</a>
+          <a class="btn btn-primary btn-lg" href="https://play.google.com/store/apps/dev?id=6351962793704484313&hl=en" role="button">Google Playstore</a>
         </p>
       </div>
     </div>
